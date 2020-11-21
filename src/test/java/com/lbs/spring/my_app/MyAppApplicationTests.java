@@ -8,10 +8,15 @@ import org.skyscreamer.jsonassert.JSONAssert;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.List;
+
 import org.junit.Assert;
+
 import javax.annotation.Resource;
 
+import lombok.extern.slf4j.Slf4j;
+
 @SpringBootTest
+@Slf4j
 class MyAppApplicationTests {
 
     @Resource
@@ -29,11 +34,11 @@ class MyAppApplicationTests {
     void insetTest() {
         User user = new User();
         user.setAge(28);
-        user.setName("lbs");
+        user.setRealName("lbs");
 //        user.setId(1992L);
         user.setEmail("lbs1203940926@163.com");
         int rows = userMapper.insert(user);
-        System.out.println("影响记录数：" + rows);
+        log.error("lbsTest--影响记录数:" + rows);
     }
 
 

@@ -19,7 +19,7 @@ spring:
 # Logger Config
 logging:
   level:
-    root: debug
-    com.lbs.spring.my_app.dap: trace
+    root: error
+    com.lbs.spring.my_app.dap: error
   pattern:
     console: '%p%m%n'
