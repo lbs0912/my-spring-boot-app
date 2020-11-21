@@ -12,11 +12,14 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/mybatis?useSSL=false&serverTimerzone=Asia/Shanghai
+    url: jdbc:mysql://localhost:3306/mybatis?useSSL=false&serverTimerzone=Asia/Shanghai  # mybatis为数据库表名
     username: root
     password: mysql113459
 
 # Logger Config
 logging:
   level:
-    com.baomidou.mybatisplus.samples.quickstart: debug
+    root: debug
+    com.lbs.spring.my_app.dap: trace
+  pattern:
+    console: '%p%m%n'

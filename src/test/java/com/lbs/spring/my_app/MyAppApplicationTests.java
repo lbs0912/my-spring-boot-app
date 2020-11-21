@@ -30,7 +30,7 @@ class MyAppApplicationTests {
         User user = new User();
         user.setAge(28);
         user.setName("lbs");
-        user.setId(1992L);
+//        user.setId(1992L);
         user.setEmail("lbs1203940926@163.com");
         int rows = userMapper.insert(user);
         System.out.println("影响记录数：" + rows);
