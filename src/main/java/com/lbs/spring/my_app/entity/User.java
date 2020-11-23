@@ -2,16 +2,20 @@ package com.lbs.spring.my_app.entity;
 
 
 import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableName;
 
 import lombok.Data;
 
 @Data
-@TableName("mp_user")
 public class User {
     private Long id;
-    @TableField("name")
-    private String realName;
+    private String name;
     private Integer age;
     private String email;
+    private String createTime;
+    private String updateTime;
+    private Integer version;
+    private Integer deleted;
+    //备注
+    @TableField(exist = false)
+    private String remark;
 }

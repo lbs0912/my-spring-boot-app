@@ -23,7 +23,7 @@ public class MybatisPlusTestController {
     public void insertUser() {
         User user = new User();
         user.setAge(28);
-        user.setRealName("lbs");
+        user.setName("lbs");
 //        user.setId(1992L);
         user.setEmail("lbs1203940926@163.com");
         int rows = userMapper.insert(user);

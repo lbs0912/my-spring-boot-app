@@ -20,6 +20,6 @@ spring:
 logging:
   level:
     root: error
-    com.lbs.spring.my_app.dap: error
+    com.lbs.spring.my_app: trace
   pattern:
     console: '%p%m%n'
