@@ -47,11 +47,11 @@ class MyAppApplicationTests {
 
     @Test
     void queryTest() {
-        User user = userMapper.selectById(1330168733250916353L);
+        User user = userMapper.selectById(1992L);
         log.error("lbsTest--query-user:" + JSONUtil.toJsonStr(user));
         Map<String,Object> map = new HashMap<>();
 
-        map.put("age",20);
+        map.put("age", 28);
         List<User> list = userMapper.selectByMap(map);
         log.error("lbsTest--query-user:" + JSONUtil.toJsonStr(list));
     }
@@ -60,8 +60,8 @@ class MyAppApplicationTests {
     @Test
     void selectByWrapper() {
         QueryWrapper<User> queryWrapper = new QueryWrapper<User>();
-        queryWrapper.like("name","lbs0912")
-                .lt("age",40); //支持链式调用
+        queryWrapper.like("name", "lbs0912")
+                .lt("age", 28); //支持链式调用
         List<User> list = userMapper.selectList(queryWrapper);
         list.forEach(System.out::println);
     }
