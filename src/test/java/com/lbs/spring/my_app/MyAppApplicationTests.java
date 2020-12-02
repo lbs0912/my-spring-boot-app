@@ -5,7 +5,6 @@ import com.lbs.spring.my_app.dao.UserMapper;
 import com.lbs.spring.my_app.entity.User;
 
 import org.junit.jupiter.api.Test;
-import org.skyscreamer.jsonassert.JSONAssert;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.HashMap;
@@ -16,7 +15,6 @@ import org.junit.Assert;
 
 import javax.annotation.Resource;
 
-import cn.hutool.json.JSON;
 import cn.hutool.json.JSONUtil;
 import lombok.extern.slf4j.Slf4j;
 
@@ -29,7 +27,7 @@ class MyAppApplicationTests {
 
     @Test
     void basicDemo1() {
-        log.error("----- selectAll method test ------");
+        log.error("----- 入门Demo 1 ------");
         List<User> userList = userMapper.selectList(null);
         Assert.assertEquals(5, userList.size());
         userList.forEach(System.out::println);
