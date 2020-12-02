@@ -23,3 +23,7 @@ logging:
     com.lbs.spring.my_app: trace
   pattern:
     console: '%p%m%n'
+
+mybatis-plus:
+  configuration:
+  local-cache-scope:statement
