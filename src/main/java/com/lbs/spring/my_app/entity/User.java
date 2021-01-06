@@ -15,7 +15,5 @@ public class User {
     private String updateTime;
     private Integer version;
     private Integer deleted;
-    //备注
-    @TableField(exist = false)
     private String remark;
 }
